@@ -5,13 +5,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class expressions {
-	public static boolean expression(String str){
+	public static boolean expression(String expr){
 		String str_p="^(((-?([a-zA-Z]+)\\s*(\\^\\s*([0-9]+))?)|(((-?\\d+(\\.\\d+)?)\\s*)(([a-zA-Z]+)(\\^\\s*([0-9]+))?)?\\s*))[\\+\\-\\*]\\s*)*((-?([a-zA-Z]+)\\s*(\\^\\s*([0-9]+))?)|(((-?\\d+(\\.\\d+)?)\\s*)(([a-zA-Z]+)(\\^\\s*([0-9]+))?)?\\s*))$";
 		Pattern pat=Pattern.compile(str_p);
-		Matcher mat=pat.matcher(str);
+		Matcher mat=pat.matcher(expr);
 		boolean rs=mat.find();
 		if(rs){
-			System.out.println(str);
+			System.out.println(expr);
 			return true;
 		}
 		else{
