@@ -252,9 +252,9 @@ public class Test {
 		}
 		return exp;
 	}
-
+110
 	
-	public static void main(String[] args){
+	888 static void main(String[] args){
 		Scanner input=new Scanner(System.in);
 		String str;
 		boolean rs;
