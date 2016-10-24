@@ -260,7 +260,7 @@ public class Test {
 		boolean rs;
 		long startTime=0,endTime=0;
 		do{
-			System.out.println("????????????");
+			System.out.println("请输入多项式：");
 			str=input.nextLine();
 			rs=expression(str);
 		}while(rs==false);
@@ -269,11 +269,11 @@ public class Test {
 		
 		String str2="";
 		String Con="";
-		System.out.print("???????????y or n??????");
+		System.out.print("是否输入命令（y or n）？：");
 		Con=input.next();
 		while(Con.equals("y")){
 			input.nextLine();
-			System.out.print("??????????");
+			System.out.print("请输入命令：");
 			str2=input.nextLine();
 			
 			String str_p1="^!simplify\\s*(\\s+([a-zA-Z]+)=(-?\\d+(\\.\\d+)?)[ ]*)*$";
@@ -296,10 +296,10 @@ public class Test {
 				System.out.println("Error Command!");
 			}
 			endTime=System.currentTimeMillis();
-			System.out.println("??п????? "+startTime+"ms");
-			System.out.println("??н?????? "+endTime+"ms");
-			System.out.println("????????? "+(endTime-startTime)+"ms");
-			System.out.print("??????????????y or n??????");
+			System.out.println("执行开始时间： "+startTime+"ms");
+			System.out.println("执行结束时间： "+endTime+"ms");
+			System.out.println("执行总的时间： "+(endTime-startTime)+"ms");
+			System.out.print("是否继续输入命令（y or n）？：");
 			Con=input.next();
 		}
 		input.close();
